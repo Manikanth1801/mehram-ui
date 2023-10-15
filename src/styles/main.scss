@@ -1,0 +1,14 @@
+@import "./variables";
+.hover:hover {
+  cursor: pointer;
+  color: $lime;
+}
+.item_selected {
+    color: $yellow;
+    border: 1px solid $yellow;
+    border-radius: 5px;
+}
+.item_selected:hover{
+  cursor: pointer;
+  color: $yellow;
+}

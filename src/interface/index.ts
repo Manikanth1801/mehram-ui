@@ -5,6 +5,7 @@ export interface RouteInterface {
     route:string,
     description:string,
     icon:string,
-    element:React.ElementType
+    element:React.ElementType,
+    navVisible:boolean
 
 }

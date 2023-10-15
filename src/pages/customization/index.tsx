@@ -2,7 +2,7 @@ import { FC } from "react"
 
 const CustomizationPage:FC = () => {
   return (
-    <div>CustomizationPage</div>
+    <div style={{border:'5px solid blue'}} >CustomizationPage</div>
   )
 }
 

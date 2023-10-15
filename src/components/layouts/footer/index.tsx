@@ -1,11 +1,17 @@
-import {FC} from 'react'
-import { Layout as AntLayout } from 'antd';
+import { FC } from 'react'
 import styles from './footer.module.scss'
+import { Row, Typography } from 'antd'
 
-const Footer:FC = () => {
+const Footer: FC = () => {
   return (
     <>
-    <AntLayout.Footer className={styles.test_class} > All rights to Manikantha Panigrahi</AntLayout.Footer>
+      <div className={styles.footer_main} >
+        <Row align='middle' justify='center'>
+          <Typography>
+           💡 All rights to Manikantha Panigrahi 🚨
+          </Typography>
+        </Row>
+      </div>
     </>
   )
 }

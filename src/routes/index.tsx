@@ -1,9 +1,11 @@
-import { appRoutes } from '@/constants';
-import { FC } from 'react'
+import { appRoutes, authRoutes } from '@/constants';
+import GlobalContext from '@/context/context';
+import { FC, useContext } from 'react'
 import { Routes, Route } from "react-router-dom";
 
 
 const AppRoutes: FC = () => {
+  const { isLogin } = useContext(GlobalContext);
   return (
     <>
       <Routes>
@@ -13,7 +15,11 @@ const AppRoutes: FC = () => {
             </>
           ))
         }
-        
+        {isLogin && authRoutes.map((authRoute, index) => (
+          <Route key={index} path={authRoute.route} element={<authRoute.element />} />
+        ))}
+
+
       </Routes>
     </>
   )
